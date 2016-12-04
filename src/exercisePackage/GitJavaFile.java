@@ -7,6 +7,9 @@ public class GitJavaFile {
 		int num = 32;
 		String age = name + "i am "+ num + " years old";
 		System.out.println(age);
+		
+		String country = " My country Name Is Bangladesh";
+		System.out.println(country);
 	}
 
 }
