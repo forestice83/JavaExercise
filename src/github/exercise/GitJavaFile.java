@@ -1,4 +1,4 @@
-package exercisePackage;
+package github.exercise;
 
 public class GitJavaFile {
 
