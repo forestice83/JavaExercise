@@ -12,7 +12,7 @@ public class GitJavaFile {
 
 		String country = " My country Name Is Bangladesh";
 		System.out.println(country);
-		System.out.println(getMyName("Ans 1." + name));
+		System.out.println("Ans 1." + getMyName(name));
 		System.out.println("Ans 2." + getEvenNumberList(num));
 		System.out.println("Ans 3. " + getOddNumList(num));
 
@@ -35,10 +35,10 @@ public class GitJavaFile {
 	 */
 	public static ArrayList<Integer> getEvenNumberList(int number) {
 		ArrayList<Integer> evenNumList = new ArrayList<Integer>();
-		for (int i = 0; i <= number; i = i++) {
-			if (i % 2 == 0)
-				;
-			evenNumList.add(i);
+		for (int i = 0; i <= number; i++) {
+			if (i % 2 == 0) {
+				evenNumList.add(i);
+			}
 		}
 		return evenNumList;
 	}
@@ -51,9 +51,9 @@ public class GitJavaFile {
 	public static ArrayList<Integer> getOddNumList(int number) {
 		ArrayList<Integer> oddNumList = new ArrayList<Integer>();
 		for (int i = 0; i <= number; i++) {
-			if (i % 2 == 1)
-				;
-			oddNumList.add(i);
+			if (i % 2 == 1) {
+				oddNumList.add(i);
+			}
 		}
 		return oddNumList;
 	}
