@@ -17,7 +17,20 @@ public class GitJavaFile {
 		System.out.println("Ans 3. " + getOddNumList(num));
 		System.out.println("Ans 4. " + getKilo(num));
 		System.out.println("Ans 5. " + getUpperCase(name));
+		System.out.println("Ans 6. " + getLowerCase(name));
 
+	}
+	/**
+	 * Qua 6. write a method that take a String input and return same string on Lower case
+	 *  input / parameter = String text 
+	 *  output / Return type = String
+	 * serving bucket / container = variable
+	 */
+	public static String getLowerCase(String text){
+		String lowerCase = "";
+		lowerCase = text.toLowerCase();
+		return lowerCase;
+		
 	}
 	/**
 	 * Qua 5. write a method that take a String input and return same string on
