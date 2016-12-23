@@ -16,7 +16,19 @@ public class GitJavaFile {
 		System.out.println("Ans 2." + getEvenNumberList(num));
 		System.out.println("Ans 3. " + getOddNumList(num));
 		System.out.println("Ans 4. " + getKilo(num));
+		System.out.println("Ans 5. " + getUpperCase(name));
 
+	}
+	/**
+	 * Qua 5. write a method that take a String input and return same string on
+	 * upper case input / parameter = String text output / Return type = String
+	 * serving bucket / container = variable
+	 */
+	public static String getUpperCase(String text){
+		String upperCase = " ";
+		upperCase = text.toUpperCase();
+		
+		return upperCase;
 	}
 
 	/**
