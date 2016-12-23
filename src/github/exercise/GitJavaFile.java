@@ -18,7 +18,20 @@ public class GitJavaFile {
 		System.out.println("Ans 4. " + getKilo(num));
 		System.out.println("Ans 5. " + getUpperCase(name));
 		System.out.println("Ans 6. " + getLowerCase(name));
+		System.out.println("Ans 7. " + getSum(num));
 
+	}
+	/** 7. Write a method that take one number input and return the sum of 1 to given number.
+		 * input/parameter = int number 
+		 * outpuy/return type = int 
+		 * serving bucket = variable 
+		 */
+	public static int getSum(int number){
+		int sum = 0;
+		for (int i = 0; i <=number; i++ ){
+			sum = sum+i;
+		}
+		return sum;	
 	}
 	/**
 	 * Qua 6. write a method that take a String input and return same string on Lower case
