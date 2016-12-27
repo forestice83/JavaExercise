@@ -19,8 +19,25 @@ public class GitJavaFile {
 		System.out.println("Ans 5. " + getUpperCase(name));
 		System.out.println("Ans 6. " + getLowerCase(name));
 		System.out.println("Ans 7. " + getSum(num));
+		System.out.println("Ans 8. " + getAllIndex(name));
 
 	}
+	
+	/**
+	 * Qua 8. write a method that take a String input and return a list of all
+	 * index input parameter = String text 
+	 * output /return type = ArrayList <Integer> allIndex 
+	 * service bucket / Container = List
+	 */
+	public static ArrayList <Integer> getAllIndex (String text){
+		ArrayList <Integer> allIndexNum = new ArrayList <Integer>();
+		for(int i = 0; i<= text.length(); i++){
+			allIndexNum.add(i);
+		}
+		
+		return allIndexNum;
+	}
+	
 	/** 7. Write a method that take one number input and return the sum of 1 to given number.
 		 * input/parameter = int number 
 		 * outpuy/return type = int 
@@ -33,6 +50,7 @@ public class GitJavaFile {
 		}
 		return sum;	
 	}
+	
 	/**
 	 * Qua 6. write a method that take a String input and return same string on Lower case
 	 *  input / parameter = String text 
@@ -45,6 +63,7 @@ public class GitJavaFile {
 		return lowerCase;
 		
 	}
+	
 	/**
 	 * Qua 5. write a method that take a String input and return same string on
 	 * upper case input / parameter = String text output / Return type = String
@@ -85,6 +104,7 @@ public class GitJavaFile {
 		}
 		return oddNumList;
 	}
+	
 	/**
 	 * Que 2. Write a Method that take a Number input and return the list of all
 	 * even number 0 to given number input / parameter = int Number output
@@ -99,6 +119,7 @@ public class GitJavaFile {
 		}
 		return evenNumList;
 	}
+	
 	/**
 	 * Qua 1.Write a method that take your name and return your name
 	 */
