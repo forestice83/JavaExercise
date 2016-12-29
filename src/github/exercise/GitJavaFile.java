@@ -19,9 +19,26 @@ public class GitJavaFile {
 		System.out.println("Ans 5. " + getUpperCase(name));
 		System.out.println("Ans 6. " + getLowerCase(name));
 		System.out.println("Ans 7. " + getSum(num));
-		System.out.println("Ans 8. " + getAllIndex(name));
+		System.out.println("Ans 8. " + getAllIndexList(name));
 		System.out.println("Ans 9. " + getallChar(name));
+		System.out.println("Ans 10. " + getSumAcceptEight(10));
 
+	}
+	
+	/**
+	 * Qua 10 .Write a method that take one number input and return sum of 1 to given number Accept 8 (Eight) . 
+	 * input / parameter = int number
+	 *  output / return type = int num
+	 *   serving bucket = variable
+	 */
+	public static int getSumAcceptEight(int number) {
+		int sum = 0;
+		for (int i = 0; i <= number; i++) {
+			if (i != 8) {
+				sum = sum + i;
+			}
+		}
+		return sum;
 	}
 	
 	/**
@@ -44,13 +61,13 @@ public class GitJavaFile {
 	 * output /return type = ArrayList <Integer> allIndex 
 	 * service bucket / Container = List
 	 */
-	public static ArrayList <Integer> getAllIndex (String text){
-		ArrayList <Integer> allIndexNum = new ArrayList <Integer>();
+	public static ArrayList <Integer> getAllIndexList (String text){
+		ArrayList <Integer> allIndexList = new ArrayList <Integer>();
 		for(int i = 0; i<= text.length(); i++){
-			allIndexNum.add(i);
+			allIndexList.add(i);
 		}
 		
-		return allIndexNum;
+		return allIndexList;
 	}
 	
 	/** 7. Write a method that take one number input and return the sum of 1 to given number.
