@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class GitJavaFile {
 
 	public static void main(String[] args) {
-		String name = " This is Md Chowdhury.";
+		String name = "This is Md Chowdhury.";
 		int num = 32;
 		String age = name + "i am " + num + " years old";
 		System.out.println(age);
@@ -20,7 +20,22 @@ public class GitJavaFile {
 		System.out.println("Ans 6. " + getLowerCase(name));
 		System.out.println("Ans 7. " + getSum(num));
 		System.out.println("Ans 8. " + getAllIndex(name));
+		System.out.println("Ans 9. " + getallChar(name));
 
+	}
+	
+	/**
+	 * Qua 9. write a method that take a String input and return a character of all index 
+	 * input parameter = String text 
+	 * output /return type = ArrayList <Character> allChar 
+	 * service bucket / Container = List
+	 */
+	public static ArrayList <Character> getallChar(String text){
+		ArrayList <Character> allChar = new ArrayList <Character>();
+		for ( int i = 0; i< text.length(); i++){
+			allChar.add(text.charAt(i));
+		}
+		return allChar;
 	}
 	
 	/**
