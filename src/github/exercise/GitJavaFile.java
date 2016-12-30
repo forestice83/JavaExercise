@@ -22,7 +22,22 @@ public class GitJavaFile {
 		System.out.println("Ans 8. " + getAllIndexList(name));
 		System.out.println("Ans 9. " + getallChar(name));
 		System.out.println("Ans 10. " + getSumAcceptEight(10));
+		System.out.println("Ans 11.  " + getSquare(4));
 
+	}
+	
+	/**
+	 * Qua 11. Write a method that take a number input and return square of that number .
+	 *  input / Parameter = int number 
+	 *  output / Retutn type = int SquareNum 
+	 *  Serving bucket / Container = Variable.
+	 */
+	public static int getSquare(int number) {
+		int squareNum = 0;
+		for (int i = 0; i <= number; i++) {
+			squareNum = i * i;
+		}
+		return squareNum;
 	}
 	
 	/**
