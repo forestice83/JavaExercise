@@ -1,6 +1,7 @@
 package github.exercise;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class GitJavaFile {
 
@@ -23,7 +24,21 @@ public class GitJavaFile {
 		System.out.println("Ans 9. " + getallChar(name));
 		System.out.println("Ans 10. " + getSumAcceptEight(10));
 		System.out.println("Ans 11.  " + getSquare(4));
+		System.out.println("Ans 12. " + Arrays.toString(getNumArray(11)));
 
+	}
+	
+	/**
+	 * Qua 12. write a method that takes one number input and return an Array that contains 0 to given number .
+	 *  input / parameter = int number
+	 *   output / return type = Array ; 
+	 *   serving bucket = Array
+	 */
+	public static int [] getNumArray (int number){
+		int [] numArray = new int[number+1];
+		for (int i = 0; i<=number ; i++ )
+			numArray[i] = i;
+		return numArray;
 	}
 	
 	/**
