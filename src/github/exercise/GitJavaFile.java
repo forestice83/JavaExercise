@@ -25,7 +25,42 @@ public class GitJavaFile {
 		System.out.println("Ans 10. " + getSumAcceptEight(10));
 		System.out.println("Ans 11.  " + getSquare(4));
 		System.out.println("Ans 12. " + Arrays.toString(getNumArray(11)));
+		System.out.println("Ans 13A. " + getEvebNumCount(num));
+		System.out.println("Ans 13. " + Arrays.toString(getEvenArray(num)));
 
+	}
+	
+	/**
+	 * Qua 13. write a method that takes one number input and return an Array
+	 * that contains Even number 0 to given. 
+	 * input / parameter = int number
+	 * output / return type = Array ; 
+	 * serving bucket = Array
+	 */
+	public static int[] getEvenArray(int number) {
+		int index = 0;
+		int[] evenArray = new int[getEvebNumCount(number)];
+		for (int i = 0; i <= number; i++) {
+			if (i % 2 == 0) {
+				evenArray[index] = i;
+				index++;
+			}
+		}
+		return evenArray;
+	}
+	/**
+	 * Qua 13A. Write A method that takes one number input and return the count of all
+	 * even number within 0 to that given number input / parameter = int number
+	 * output and return type = int serving bucket = variable
+	 */
+	public static int getEvebNumCount(int number){
+		int count = 0;
+		for (int i = 0; i<=number ; i++ ){
+			if (i % 2 == 0){
+				count++;
+			}
+		}
+	return count ; 	
 	}
 	
 	/**
