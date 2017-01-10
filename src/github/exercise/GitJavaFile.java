@@ -13,26 +13,65 @@ public class GitJavaFile {
 
 		String country = " My country Name Is Bangladesh";
 		System.out.println(country);
-		System.out.println("Ans 1." + getMyName(name));
-		System.out.println("Ans 2." + getEvenNumberList(num));
-		System.out.println("Ans 3. " + getOddNumList(num));
-		System.out.println("Ans 4. " + getKilo(num));
-		System.out.println("Ans 5. " + getUpperCase(name));
-		System.out.println("Ans 6. " + getLowerCase(name));
-		System.out.println("Ans 7. " + getSum(num));
-		System.out.println("Ans 8. " + getAllIndexList(name));
+		System.out.println("Ans 1." + getMyName(name) );
+		System.out.println("Ans 2." + getEvenNumberList(num) );
+		System.out.println("Ans 3. " + getOddNumList(num) );
+		System.out.println("Ans 4. " + getKilo(num) );
+		System.out.println("Ans 5. " + getUpperCase(name) );
+		System.out.println("Ans 6. " + getLowerCase(name) );
+		System.out.println("Ans 7. " + getSum(num) );
+		System.out.println("Ans 8. " + getAllIndexList(name) );
 		System.out.println("Ans 9. " + getallChar(name));
-		System.out.println("Ans 10. " + getSumAcceptEight(10));
-		System.out.println("Ans 11.  " + getSquare(4));
-		System.out.println("Ans 12. " + Arrays.toString(getNumArray(11)));
-		System.out.println("Ans 13A. " + getEvebNumCount(num));
-		System.out.println("Ans 13. " + Arrays.toString(getEvenArray(num)));
+		System.out.println("Ans 10. " + getSumAcceptEight(10) );
+		System.out.println("Ans 11.  " + getSquare(4) );
+		System.out.println("Ans 12. " + Arrays.toString( getNumArray(11) ) );
+		System.out.println("Ans 13A. " + getEvebNumCount(num) );
+		System.out.println("Ans 13. " + Arrays.toString( getEvenArray(num) ) );
+		System.out.println("Ans 14A. " + getOddNumCount( num ) );
+		System.out.println("Ans 14. " + Arrays.toString( getOddNumArray(num) ) );
 
+	}
+	/**
+	 * Qua 14. write a method that takes one number input and return an Array
+	 * that contains Odd number 0 to given number 
+	 * input / parameter = int number
+	 * output / return type = Array ; 
+	 * serving bucket = Array
+	 */
+	public static int[] getOddNumArray(int number) {
+		int index = 0;
+		int[] oddArray = new int[getOddNumCount(number)];
+		for (int i = 0; i <= number; i++) {
+			if (i % 2 == 1) {
+				oddArray[index] = i;
+				index++;
+			}
+		}
+		return oddArray;
+	}
+	
+	/**
+	 *  Qua 14 A. Write A method that takes one number input and return the count of all
+	 *  Odd number within 0 to that given number
+	 *  input / parameter = int number
+	 *  output and return type = int 
+	 *  serving bucket = variable
+	 */
+	
+	public static int getOddNumCount(int number) {
+
+		int count = 0;
+		for (int i = 0; i < number; i++) {
+			if (i % 2 == 1) {
+				count++;
+			}
+		}
+		return count;
 	}
 	
 	/**
 	 * Qua 13. write a method that takes one number input and return an Array
-	 * that contains Even number 0 to given. 
+	 * that contains Even number 0 to given number.
 	 * input / parameter = int number
 	 * output / return type = Array ; 
 	 * serving bucket = Array
