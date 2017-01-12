@@ -30,8 +30,32 @@ public class GitJavaFile {
 		System.out.println("Ans 14A. " + getOddNumCount( num ) );
 		System.out.println("Ans 14. " + Arrays.toString( getOddNumArray(num) ) );
 		System.out.println("Ans 15. " + getnumList(num) );
+		System.out.println("Ans 16. " + getFizzBuzz(15) );
 
 	}
+	
+	/**
+	 * Qua 16. Write a method that take one number input and return fizz if the given number 
+	 * divided by 5 / return Buzz if the given number divided by 3 / 
+	 * and return FizzBuzz if the given number divided by 5 && 3 otherwise return Null.
+	 *  input /parameter = int  ( 15/20/21/22 )
+	 *  output /return type = string 
+	 * serving bucket or container = variable
+	 */
+	public static String getFizzBuzz(int number) {
+		String text = " ";
+		if (number % 5 == 0 && number % 3 == 0) {
+			text = "FizzBuzz";
+		} else if (number % 5 == 0) {
+			text = "Fizz";
+		} else if (number % 3 == 0) {
+			text = "Buzz";
+		} else {
+			text = "Null";
+		}
+		return text;
+	}
+
 	/**
 	 * Qua 15. Write a Method that take one number input and return a number of
 	 * list stating from 0 to given number .
