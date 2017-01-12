@@ -29,8 +29,25 @@ public class GitJavaFile {
 		System.out.println("Ans 13. " + Arrays.toString( getEvenArray(num) ) );
 		System.out.println("Ans 14A. " + getOddNumCount( num ) );
 		System.out.println("Ans 14. " + Arrays.toString( getOddNumArray(num) ) );
+		System.out.println("Ans 15. " + getnumList(num) );
 
 	}
+	/**
+	 * Qua 15. Write a Method that take one number input and return a number of
+	 * list stating from 0 to given number .
+	 *  input / parameter = int number ;
+	 *  output /reurn type = ArrayList<Integer> 
+	 *  serving bucket = list
+	 */
+	public static ArrayList<Integer> getnumList(int num) {
+
+		ArrayList<Integer> numList = new ArrayList<Integer>();
+		for (int i = 0; i <= num; i++) {
+			numList.add(i);
+		}
+		return numList;
+	}
+	
 	/**
 	 * Qua 14. write a method that takes one number input and return an Array
 	 * that contains Odd number 0 to given number 
