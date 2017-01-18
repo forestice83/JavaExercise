@@ -3,6 +3,8 @@ package github.exercise;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel;
+
 public class GitJavaFile {
 
 	public static void main(String[] args) {
@@ -31,7 +33,45 @@ public class GitJavaFile {
 		System.out.println("Ans 14. " + Arrays.toString( getOddNumArray(num) ) );
 		System.out.println("Ans 15. " + getnumList(num) );
 		System.out.println("Ans 16. " + getFizzBuzz(15) );
+		
+		int [] numArray = { 8, 12, 15, 22, 25 }; 
+		System.out.println("Ans 17. " + getMaxNumber(numArray));
+		System.out.println("Ans 18. " + getMinNumber(numArray));
+		
+	}
+	/**
+	 * Qus 18. Write A Method That Take one Number Array input and return the
+	 * Min Number
+	 *  input/Parameter = int[]numberArray 
+	 *  output/ return type = int
+	 *  serving bucket = variable
+	 */
 
+	public static int getMinNumber(int[] numberArray) {
+		int minNum = numberArray[0];
+		for (int i = 0; i < numberArray.length; i++) {
+			if (minNum > numberArray[i])
+				minNum = numberArray[i];
+		}
+
+		return minNum;
+	}
+	
+	/**
+	 * Qus 17. Write A Method That Take one Number Array input and return the
+	 * Max Number
+	 *  input/Parameter = int[]numberArray 
+	 *  output/ return type = int
+	 *  serving bucket = variable
+	 */
+	
+	public static int getMaxNumber(int[] numberArray) {
+		int maxNum = numberArray[0];
+		for (int i = 0; i < numberArray.length; i++) {
+			if (maxNum < numberArray[i])
+				maxNum = numberArray[i];
+		}
+		return maxNum;
 	}
 	
 	/**
