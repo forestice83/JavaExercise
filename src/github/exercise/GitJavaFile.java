@@ -36,6 +36,21 @@ public class GitJavaFile {
 		System.out.println("Ans 17. " + getMaxNumber(numArray));
 		System.out.println("Ans 18. " + getMinNumber(numArray));
 		System.out.println("Ans 19. " + getSameNumber(50));
+		System.out.println("Ans 20. " + getSameNumber("55"));
+	}
+
+	/**
+	 * qua 20.write a method that take a string representation of number input
+	 * and return the same value as an integer 
+	 * input/ parameter = string 
+	 * output / return type = int sameNumber 
+	 * serving bucket = variable
+	 */
+	
+	public static int getSameNumber(String text) {
+		int num = 0;
+		num = Integer.valueOf(text);
+		return num;
 	}
 	
 	/**
@@ -44,6 +59,7 @@ public class GitJavaFile {
 	 *  output return type = String
 	 * serving bucket = variable
 	 */
+	
 	public static String getSameNumber ( int number) {
 		String  sameNumber = "";
 		sameNumber = String.valueOf(number);
