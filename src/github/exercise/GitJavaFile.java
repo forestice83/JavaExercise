@@ -3,8 +3,6 @@ package github.exercise;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel;
-
 public class GitJavaFile {
 
 	public static void main(String[] args) {
@@ -37,8 +35,21 @@ public class GitJavaFile {
 		int [] numArray = { 8, 12, 15, 22, 25 }; 
 		System.out.println("Ans 17. " + getMaxNumber(numArray));
 		System.out.println("Ans 18. " + getMinNumber(numArray));
-		
+		System.out.println("Ans 19. " + getSameNumber(50));
 	}
+	
+	/**
+	 * Qua 19. Write a Method that take one number input and return same value as a String 
+	 * input/ parameter = int number;
+	 *  output return type = String
+	 * serving bucket = variable
+	 */
+	public static String getSameNumber ( int number) {
+		String  sameNumber = "";
+		sameNumber = String.valueOf(number);
+		return sameNumber;
+	}
+	
 	/**
 	 * Qus 18. Write A Method That Take one Number Array input and return the
 	 * Min Number
@@ -53,7 +64,6 @@ public class GitJavaFile {
 			if (minNum > numberArray[i])
 				minNum = numberArray[i];
 		}
-
 		return minNum;
 	}
 	
