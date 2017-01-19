@@ -33,12 +33,29 @@ public class GitJavaFile {
 		System.out.println("Ans 16. " + getFizzBuzz(15) );
 		
 		int [] numArray = { 8, 12, 15, 22, 25 }; 
-		System.out.println("Ans 17. " + getMaxNumber(numArray));
-		System.out.println("Ans 18. " + getMinNumber(numArray));
-		System.out.println("Ans 19. " + getSameNumber(50));
-		System.out.println("Ans 20. " + getSameNumber("55"));
+		System.out.println("Ans 17. " + getMaxNumber(numArray) );
+		System.out.println("Ans 18. " + getMinNumber(numArray) );
+		System.out.println("Ans 19. " + getSameNumber(50) );
+		System.out.println("Ans 20. " + getSameNumber("55") );
+		System.out.println("Ans 21. " + getSelectCharA(age) );
 	}
 
+	/**
+	 * Qus 21 .Write A method That takes String input and return true if it
+	 * contains char 'A; other wise return false. 
+	 * input / Parameter = String text 
+	 * Output/ return type = boolean 
+	 * serving bucket = variable
+	 */
+
+	public static boolean getSelectCharA(String text) {
+		boolean abc = false;
+		if (text.contains("a")) {
+			abc = true;
+		}
+		return abc;
+	}
+	
 	/**
 	 * qua 20.write a method that take a string representation of number input
 	 * and return the same value as an integer 
