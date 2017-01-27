@@ -38,12 +38,27 @@ public class GitJavaFile {
 		System.out.println("Ans 19. " + getSameNumber(50) );
 		System.out.println("Ans 20. " + getSameNumber("55") );
 		System.out.println("Ans 21. " + getSelectCharA(age) );
+		System.out.println("Ans 22." + getSumAllIndex(name));
+	}
+	
+	/**
+	 * Qua 22, Write a method that take one String input and return the sum of
+	 * all index; 
+	 * input /parameter = String text 
+	 * return output = Integer;
+	 * serving bucket = variable
+	 */
+	public static int getSumAllIndex(String text) {
+		int sum = 0;
+		for (int i = 0; i < text.length(); i++)
+			sum = sum + i;
+		return sum;
 	}
 
 	/**
 	 * Qus 21 .Write A method That takes String input and return true if it
 	 * contains char 'A; other wise return false. 
-	 * input / Parameter = String text 
+	 * input / Parameter = String text
 	 * Output/ return type = boolean 
 	 * serving bucket = variable
 	 */
