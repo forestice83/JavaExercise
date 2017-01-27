@@ -39,11 +39,26 @@ public class GitJavaFile {
 		System.out.println("Ans 20. " + getSameNumber("55") );
 		System.out.println("Ans 21. " + getSelectCharA(age) );
 		System.out.println("Ans 22." + getSumAllIndex(name));
+		System.out.println("Ans 23." + getLastFiveChar(name));
 	}
 	
 	/**
-	 * Qua 22, Write a method that take one String input and return the sum of
-	 * all index; 
+	 * Qua 23, Write a method that take one String input and return list of last Five Character;
+	 *  input / parameter = (String text) 
+	 *  output / return Type = ArrayList<Character> 
+	 * serving bucket Container = list
+	 */
+	
+	public static ArrayList<Character> getLastFiveChar(String Text) {
+		ArrayList<Character> lastFiveChar = new ArrayList<Character>();
+		for ( int i = Text.length()-5; i< Text.length(); i++ )
+			lastFiveChar.add(Text.charAt(i));
+		
+		return lastFiveChar;
+	}
+	
+	/**
+	 * Qua 22, Write a method that take one String input and return the sum of all index; 
 	 * input /parameter = String text 
 	 * return output = Integer;
 	 * serving bucket = variable
