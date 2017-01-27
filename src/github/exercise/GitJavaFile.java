@@ -40,8 +40,22 @@ public class GitJavaFile {
 		System.out.println("Ans 21. " + getSelectCharA(age) );
 		System.out.println("Ans 22." + getSumAllIndex(name));
 		System.out.println("Ans 23." + getLastFiveChar(name));
+		System.out.println("Ans 24." + getFirstFiveChar(name));
 	}
 	
+	/**
+	 * Que 24. write a method that take a one string input and return a list the first five charater
+	 * input /parameter = String text 
+	 * return output = ArrayList<Character>;
+	 * serving bucket = list
+	 */
+	public static ArrayList<Character> getFirstFiveChar(String text) {
+		ArrayList<Character> firstFiveChar = new ArrayList<Character>();
+		for (int i = 0; i < 5; i++) {
+			firstFiveChar.add(text.charAt(i));
+		}
+		return firstFiveChar;
+	}
 	/**
 	 * Qua 23, Write a method that take one String input and return list of last Five Character;
 	 *  input / parameter = (String text) 
@@ -51,9 +65,9 @@ public class GitJavaFile {
 	
 	public static ArrayList<Character> getLastFiveChar(String Text) {
 		ArrayList<Character> lastFiveChar = new ArrayList<Character>();
-		for ( int i = Text.length()-5; i< Text.length(); i++ )
+		for (int i = Text.length() - 5; i < Text.length(); i++)
 			lastFiveChar.add(Text.charAt(i));
-		
+
 		return lastFiveChar;
 	}
 	
