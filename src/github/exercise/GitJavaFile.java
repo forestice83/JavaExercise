@@ -11,7 +11,7 @@ public class GitJavaFile {
 		String age = name + "i am " + num + " years old";
 		System.out.println(age);
 
-		String country = " My country Name Is Bangladesh";
+		String country = "My country Name Is Bangladesh";
 		System.out.println(country);
 		System.out.println("Ans 1." + getMyName(name) );
 		System.out.println("Ans 2." + getEvenNumberList(num) );
@@ -41,6 +41,115 @@ public class GitJavaFile {
 		System.out.println("Ans 22." + getSumAllIndex(name));
 		System.out.println("Ans 23." + getLastFiveChar(name));
 		System.out.println("Ans 24." + getFirstFiveChar(name));
+		
+		System.out.println("Ans 25." + getAllWordList(country));
+		System.out.println("Ans 25 A. " + getTwoWordList(country));
+		System.out.println("Ans 26. " + getFirstWord(country));
+		System.out.println("Ans 27. " + getResult(country, "hjgs"));
+		System.out.println("Ans 28. " + getWordCount(country, "My"));
+		System.out.println("Ans 29. " + getConsonantCount(country));
+	}
+	
+	/**
+	 * Qus 29. Write a method that take one String & one word input and return
+	 * the count of all consonant 
+	 * input / parameter = String text ,  output = int  , serving bucket = variable
+	 */
+	public static int getConsonantCount(String text) {
+		int allConsCount = 0;
+			String consonant ="bcdfghjklmnpqrstvwxyz";
+			String newText = text.toLowerCase();
+			// System.out.println(consonant.length());
+		for( int i = 0; i< newText.length(); i++ ){
+			String ConvertedText = (String.valueOf(newText.charAt(i)));
+			if(consonant.contains(ConvertedText)){
+		allConsCount++;
+			}
+		}
+		return allConsCount;
+	}
+	
+	/**
+	 * Qus 28. Write a method that take one String & one word input and return
+	 * the count of given word. 
+	 * input / parameter = String text ,  output = int  , serving bucket = variable
+	 */
+	
+	public static int getWordCount(String text, String word) {
+		int wordCount = 0;
+		String[] wordArray = text.split(" ");
+		for (int i = 0; i < wordArray.length; i++) {
+			if (wordArray[i].equalsIgnoreCase(word))
+				wordCount++;
+		}
+		return wordCount;
+	}
+	
+	/**
+	 * qua. 27. Write a method that take one String & one word input and return
+	 * true if that sentence contain given word otherwise return false. 
+	 * input /parameter = string text String word,  output / return type = boolean getResult; 
+	 * serving bucket / container = variable
+	 */
+	
+	public static boolean getResult(String text, String word) {
+		boolean result = false;
+		String[] wordArray = text.split(" ");
+		for (int i = 0; i < wordArray.length; i++) {
+			if (wordArray[i].toLowerCase().contains(word))
+				result = true;
+		}
+		return result;
+	}
+	
+	/**
+	 * 26. Write a method that takes one String input and return first word
+	 * input /parameter = String text 
+	 * return type = String 
+	 * serving bucket = variable
+	 */
+	
+	public static String getFirstWord(String text){
+		String word = "";
+		String [] wordArray = text.split(" ");
+		word = wordArray[0];
+		
+		return word;
+	}
+	
+	/**
+	 * Qua 25 A. Write A method That Take One String input return list of 2 Word. 
+	 * input / parameter = string text 
+	 * output / return type = ArrayList<String > 
+	 * service bucket / Container = list
+	 */
+	
+	public static ArrayList<String > getTwoWordList(String text) {
+		ArrayList<String > wordList =  new ArrayList<String >();
+		String[] wordArray = text.split(" ");
+		for ( int i = 0; i<wordArray.length; i++) {
+			if ( i % 2 == 1 ) {
+				break;
+			}
+			wordList.add(wordArray[i]);
+		}
+		return wordList;
+	}
+	
+	/**
+	 * Qua 25. Write A method That Take One String input return list of all Word. 
+	 * input / parameter = string text 
+	 * output / return type = ArrayList<String > 
+	 * service bucket / Container = list
+	 */
+	
+	public static ArrayList<String > getAllWordList(String text) {
+		ArrayList<String > wordList =  new ArrayList<String >();
+		String[] wordArray = text.split(" ");
+		for ( int i = 0; i<wordArray.length; i++) {
+			wordList.add(wordArray[i]);
+		}
+		return wordList;
 	}
 	
 	/**
@@ -56,13 +165,13 @@ public class GitJavaFile {
 		}
 		return firstFiveChar;
 	}
+	
 	/**
 	 * Qua 23, Write a method that take one String input and return list of last Five Character;
 	 *  input / parameter = (String text) 
 	 *  output / return Type = ArrayList<Character> 
 	 * serving bucket Container = list
 	 */
-	
 	public static ArrayList<Character> getLastFiveChar(String Text) {
 		ArrayList<Character> lastFiveChar = new ArrayList<Character>();
 		for (int i = Text.length() - 5; i < Text.length(); i++)
