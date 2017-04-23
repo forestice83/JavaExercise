@@ -11,7 +11,7 @@ public class GitJavaFile {
 		String age = name + "i am " + num + " years old";
 		System.out.println(age);
 
-		String country = "My country Name Is Bangladesh";
+		String country = "My Country Name Is Bangladesh";
 		System.out.println(country);
 		System.out.println("Ans 1." + getMyName(name) );
 		System.out.println("Ans 2." + getEvenNumberList(num) );
@@ -48,6 +48,81 @@ public class GitJavaFile {
 		System.out.println("Ans 27. " + getResult(country, "hjgs"));
 		System.out.println("Ans 28. " + getWordCount(country, "My"));
 		System.out.println("Ans 29. " + getConsonantCount(country));
+		System.out.println("Ans 30. " + getVowels(country));
+		System.out.println("Ans 31. " + getUpperCaseCount((country)));
+		System.out.println("Ans 32. " + getCharCountWithOutWhiteSpace(country));
+		System.out.println("Ans 32 A. " + getCharCountWithOutWhiteSpaceTwo(country));
+	}
+
+	/**
+	 * Qus 32 Alternate. Write a method that take one String & one word input and return
+	 * the count of Charaters without Whitespace
+	 *  input / parameter = String text
+	 * output return type = int 
+	 * serving bucket = variable
+	 */
+
+	public static int getCharCountWithOutWhiteSpaceTwo(String text) {
+		int charCount = 0;
+		String abc = text.replace(" ", "");
+		for (int i = 0; i < abc.length(); i++) {
+			charCount++;
+		}
+		return charCount;
+	}
+	
+	/**
+	 * Qus 32. Write a method that take one String & one word input and return
+	 * the count of Charaters without Whitespace
+	 *  input / parameter = String text
+	 * output return type = int 
+	 * serving bucket = variable
+	 */
+
+	public static int getCharCountWithOutWhiteSpace(String text) {
+		int charCount = 0;
+		for (int i = 0; i < text.length(); i++) {
+
+			if (text.charAt(i) != ' ') {
+				charCount++;
+			}
+		}
+		return charCount;
+	}
+
+	/**
+	 * qus 31. Write a method that take one String & one word input and return
+	 * the count of all upper case character 
+	 * input / parameter = String text; output = int count; serving bucket = variable
+	 */
+	
+	public static int getUpperCaseCount(String text) {
+		int count = 0;
+		for (int i = 0; i <text.length(); i++) {
+			 char allChar = text.charAt(i);
+			if(Character.isUpperCase(allChar)){
+				count++;
+			}
+		}
+		return count;
+	}
+	
+	/**
+	 * 30. Write a method that take one string input and return the count of all vowels
+	 * input / parameter = string text; output / return type = int vowelCount; serving bucket = variable 
+	 */
+	
+	public static int getVowels(String text) {
+		int vowelCount = 0;
+		String vowels = "aeiou";
+		String newText = text.toLowerCase();
+		for (int i = 0; i < newText.length(); i++) {
+			String ConvertedText = String.valueOf(newText.charAt(i));
+			if (vowels.contains(ConvertedText)) {
+				vowelCount++;
+			}
+		}
+		return vowelCount;
 	}
 	
 	/**
